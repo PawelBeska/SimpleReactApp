@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 
-function component() {
+function component(props) {
     return <Navbar bg="light" expand="lg">
         <Container>
             <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -20,6 +20,7 @@ function component() {
                         <NavDropdown.Divider/>
                         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                     </NavDropdown>
+                    <Nav.Link href="#">{props['username']}</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Container>
